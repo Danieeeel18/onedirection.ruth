@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ONE DIRECTION</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --rosa: #e6005c;
+      --rosado-claro: #ffb6c1;
+      --gris: #222;
+      --blanco: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--rosado-claro);
+      color: var(--gris);
+    }
+
+    header {
+      background: linear-gradient(45deg, var(--rosa), #cc0052);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .tab-menu {
+      display: flex;
+      justify-content: space-around;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .tab-menu button {
+      flex: 1;
+      padding: 15px 0;
+      background: none;
+      border: none;
+      color: var(--gris);
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tab-menu button i {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .tab-menu button.active {
+      color: var(--rosa);
+      font-weight: bold;
+      border-bottom: 3px solid var(--rosa);
+      background-color: #fff6fa;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      animation: fadeIn 0.5s ease-in-out;
+      max-width: 800px;
+      margin: auto;
+      background: var(--blanco);
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    .tabcontent.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* CARRUSEL CON BOTONES */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .carousel img {
+      width: 100%;
+      display: none;
+      border-radius: 10px;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 50%;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    form button {
+      background-color: var(--rosa);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    form button:hover {
+      background-color: #cc0052;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    a {
+      color: var(--rosa);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- MÚSICA -->
+<header>
+  <h1><i class="fas fa-music"></i> ONE DIRECTION</h1>
+  <p> Holaaa Ruth
+  ¡Bienvenida a tu Paginaaa!</p>
+  </select>
+  <br/>
+  <audio id="musicPlayer" controls autoplay loop>
+    <source id="musicSource" src="C:\Users\danii\Downloads\PW 1D\One Direction - You & I [1].mp3" type="audio/mp3">
+    Tu navegador no soporta audio.
+  </audio>
+</header>
+
+<!-- MENÚ DE PESTAÑAS -->
+<div class="tab-menu">
+  <button class="tablink active" onclick="openTab(event, 'bio')"><i class="fas fa-user"></i>?<button>
+  <button class="tablink" onclick="openTab(event, 'albums')"><i class="fas fa-compact-disc"></i>Álbumes</button>
+  <button class="tablink" onclick="openTab(event, 'photos')"><i class="fas fa-image"></i>Fotos</button>
+  <button class="tablink" onclick="openTab(event, 'favorites')"><i class="fas fa-heart"></i>Canciones favoritas</button>
+  <button class="tablink" onclick="openTab(event, 'contact')"><i class="fas fa-envelope"></i>?</button>
+</div>
+
+<!-- SECCIONES -->
+<div id="bio" class="tabcontent active">
+  <h2></h2>
+  <p>Hola otra vez jaja.     Bueno por lo que se y que creo que tengo la dicha de saber estos datos que me haz compartido, es que desde muy pequeña eres muuuy FAN de 1D y que es tu BoyBand favorita, asì como tu lo haz dicho, la música que nos gusta dice mucho de nosotros, y siento que todo eso que te transmiten sus canciones de ellos no lo sè mmmm, la nostalgia, la emoción, los recuerdos bonitos es algo que te hace sentir muy bien y que considero que es especial para ti, porque asì lo reflejas tú cuando hablas de ellos.
+
+no sé, me gusta y soy muy fan de las personas que se apasionan por lo que aman, y tú tienes eso con one direction. se nota que significan algo especial para ti, y creo que eso también hace especial la forma en que los compartes.
+
+me gusta que puedas ser tú misma hablando de lo que te gusta sin preocuparte por lo que digan
+y si algún día quieres seguir hablando de ellos, o poner canciones, yo feliz te escucho. </p>
+</div>
+
+<div id="albums" class="tabcontent">
+  <h2>Álbumes</h2>
+  <ul>
+    <li><strong>Up All Night</strong> (2011)</li>
+    <li><strong>Take Me Home</strong> (2012)</li>
+    <li><strong>Midnight Memories</strong> (2013)</li>
+    <li><strong>FOUR</strong> (2014)</li>
+    <li><strong>Made in the A.M.</strong> (2015)</li>
+  </ul>
+</div>
+
+<div id="photos" class="tabcontent">
+  <h2>Fotos</h2>
+  <div class="carousel">
+    <img class="active" src="C:\Users\danii\Downloads\PW 1D\IMG 1.jpg" />
+    <img src="C:\Users\danii\Downloads\PW 1D\IMG 2.jpg" />
+    <img src="C:\Users\danii\Downloads\PW 1D\IMG 3.jpg" />
+    <img src="C:\Users\danii\Downloads\PW 1D\IMG 4.jpg" />
+    <img src="C:\Users\danii\Downloads\PW 1D\IMG 5.jpg" />
+    <div class="carousel-buttons">
+      <button onclick="prevImage()">❮</button>
+      <button onclick="nextImage()">❯</button>
+    </div>
+  </div>
+</div>
+
+<div id="favorites" class="tabcontent">
+  <h2>🎶 Tus Canciones favoritas</h2>
+  <ul>
+ <audio controls>
+  <source src="C:\Users\danii\Downloads\PW 1D\One Direction - Steal My Girl (Audio) [1].mp3" type="audio/mpeg">
+  </audio>
+  <audio controls>
+  <source src="C:\Users\danii\Downloads\PW 1D\Blondie - One Way Or Another (Audio) [1].mp3" type="audio/mpeg">
+  </audio>
+  <audio controls>
+  <source src="C:\Users\danii\Downloads\PW 1D\One Direction - Best Song Ever (Audio) [1].mp3" type="audio/mpeg">
+  </audio>
+  <audio controls>
+  <source src="C:\Users\danii\Downloads\PW 1D\One Direction - Perfect (Audio) [1].mp3" type="audio/mpeg">
+  </audio>
+  <audio controls>
+  <source src="C:\Users\danii\Downloads\PW 1D\One Direction - History (Audio) [1].mp3" type="audio/mpeg">
+  </audio>
+  <p>Esta otra vez jaja, porque si no fuera por ti no la descubro nunca :))</p>
+  <audio controls>
+  <source src="C:\Users\danii\Downloads\PW 1D\One Direction - You & I [1].mp3" type="audio/mpeg">
+  </audio>
+    </a></li>
+  </ul>
+</div>
+
+<div id="contact" class="tabcontent">
+  <h2>Holaaa</h2>
+  <form action="https://formsubmit.co/TU-CORREO@ejemplo.com" method="POST">
+    <input type="text" name="name" placeholder="Ruth" required>
+    <textarea name="message" placeholder="Escibe un mensaje para 1D :))" rows="4" required></textarea>
+    <input type="hidden" name="_captcha" value="false">
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<footer>
+  <p>© By Ruth</p>
+</footer>
+
+<!-- FUNCIONES JS -->
+<script>
+  function openTab(evt, tabId) {
+    const tabs = document.getElementsByClassName("tabcontent");
+    const links = document.getElementsByClassName("tablink");
+    for (let tab of tabs) tab.classList.remove("active");
+    for (let link of links) link.classList.remove("active");
+    document.getElementById(tabId).classList.add("active");
+    evt.currentTarget.classList.add("active");
+  }
+
+  function changeSong() {
+    const player = document.getElementById("musicPlayer");
+    const source = document.getElementById("musicSource");
+    const selected = document.getElementById("songSelector").value;
+    let url = "";
+    if (selected === "youi") {
+      url = "https://archive.org/download/one-direction-you-i-lyrics-mp-3-320-k/One%20Direction%20-%20You%20%26%20I.mp3";
+    } else if (selected === "little") {
+      url = "https://archive.org/download/one-direction-little-things/One%20Direction%20-%20Little%20Things.mp3";
+    } else if (selected === "beautiful") {
+      url = "https://archive.org/download/one-direction-what-makes-you-beautiful_202305/One%20Direction%20-%20What%20Makes%20You%20Beautiful.mp3";
+    }
+    source.src = url;
+    player.load();
+    player.play();
+  }
+
+  let current = 0;
+  const images = document.querySelectorAll('.carousel img');
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.remove("active");
+      if (i === index) img.classList.add("active");
+    });
+  }
+
+  function nextImage() {
+    current = (current + 1) % images.length;
+    showImage(current);
+  }
+
+  function prevImage() {
+    current = (current - 1 + images.length) % images.length;
+    showImage(current);
+  }
+
+  setInterval(nextImage, 5000); // carrusel automático cada 5 segundos
+</script>
+
+</body>
+</html>
